@@ -9,11 +9,13 @@ int vuln(char *str)
     int len = strlen(str);
     if(str[0] == 'A' && len == 66)
     {
+		printf("it is A-66!\n");
         raise(SIGSEGV);
         //如果输入的字符串的首字符为A并且长度为66，则异常退出
     }
     else if(str[0] == 'F' && len == 6)
     {
+		printf("it is F-6!\n");
         raise(SIGSEGV);
         //如果输入的字符串的首字符为F并且长度为6，则异常退出
     }
